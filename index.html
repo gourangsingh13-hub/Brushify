@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Brushify</h1>
+    <div class="editor" id="editor" contenteditable="true" spellcheck="false">Hello</div>
+
+    <div class="controls">
+
+        <div class="box">
+            <h3>Background colour</h3>
+
+            <div class="colors">
+                <button class="color" style="background-color: #F4D35E;" onclick="changeBackground('#F4D35E')"></button>
+                <button class="color" style="background-color: #B565A7;" onclick="changeBackground('#B565A7')"></button>
+                <button class="color" style="background-color: #FFD6A5;" onclick="changeBackground('#FFD6A5')"></button>
+                <button class="color" style="background-color: #52B2A8;" onclick="changeBackground('#52B2A8')"></button>
+                <button class="color" style="background-color: #222222;" onclick="changeBackground('#222222')"></button>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Text color</h3>
+
+            <div class="colors">
+                <button class="color" style="background-color: #222222;" onclick="changeTextColor('#222222')"></button>
+                <button class="color" style="background-color: #2563EB;" onclick="changeTextColor('#2563EB')"></button>
+                <button class="color" style="background-color: #DC2626;" onclick="changeTextColor('#DC2626')"></button>
+                <button class="color" style="background-color: #16A34A;" onclick="changeTextColor('#16A34A')"></button>
+                <button class="color" style="background-color: #6D28D9;" onclick="changeTextColor('#6D28D9')"></button>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Font style</h3>
+
+            <div class="colors">
+                <button class="font-btn" style="font-family: Verdana;" onclick="changeFont('Verdana')">Hello</button>
+                <button class="font-btn" style="font-family: Arial;" onclick="changeFont('Arial')">Hello</button>
+                <button class="font-btn" style="font-family: Georgia;" onclick="changeFont('Georgia')">Hello</button>
+                <button class="font-btn" style="font-family: Impact;" onclick="changeFont('Impact')">Hello</button>
+                <button class="font-btn" style="font-family: Courier New;" onclick="changeFont('Courier New')">Hello</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const editor = document.getElementById("editor");
+
+        function changeBackground(color) {
+            editor.style.backgroundColor = color;
+        }
+
+        function changeTextColor(color) {
+            editor.style.color = color;
+        }
+
+        function changeFont(font) {
+            editor.style.fontFamily = font;
+        }
+    </script>
+
+</body>
+</html>
